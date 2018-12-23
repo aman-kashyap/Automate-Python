@@ -1,7 +1,8 @@
 #histogram
 
 def histogram(number):
-    print(number)
+    for number[i] in range(int(number)):
+        print('*'*int(number[i]))
 
 
 i=[2,3,4,5]
