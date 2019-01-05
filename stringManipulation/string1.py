@@ -30,3 +30,11 @@ def spam():
     newline spam() break"""
     print('hello!')
 
+spam="Hello World!"     #string indexing and slicing
+print(spam[1])
+print(spam[1:6])
+print(spam[:])
+print(spam[:-1])
+print(spam[-1])
+
+print('hello' in 'hello world!')
