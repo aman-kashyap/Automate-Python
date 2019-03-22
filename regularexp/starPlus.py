@@ -22,10 +22,13 @@ myPlus = plusRegex.search('she is the batwoman')
 
 print(myPlus.group())
 
-#matching specific repetition in the string
+#matching specific repetition in the string with curly brackets
 
-repeatRegex = re.compile(r'(Ha){3,4}')
+repeatRegex = re.compile(r'(Ha){3,5}')  #this is greedy matching it will output max of {}
+myRepeatG= repeatRegex.search('Imran Khan: peace gesture . IAF: HaHaHaHaHa')
+print(myRepeatG.group())
 
-myRepeat= repeatRegex.search('Imran Khan: peace gesture . IAF: HaHaHaHa ')
 
-print(myRepeat.group())
+repeatRegexNonGreedy = re.compile(r'(Ha){3,4}?') #this is non greedy matching with '?' out put min of {}
+myRepeatNG= repeatRegexNonGreedy.search('Imran Khan: peace gesture . IAF: HaHaHaHa ')
+print(myRepeatNG.group())
